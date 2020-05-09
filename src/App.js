@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
+import { ReactComponent } from '*.svg';
 
-function App() {
-  return (
-    <div className="App">
-Weather App 
-    </div>
-  );
+class App extends React.Component {
+ render(){
+   return (
+     <div className="app">
+
+       
+     </div>
+   )
+
+ }
 }
 
 export default App;
