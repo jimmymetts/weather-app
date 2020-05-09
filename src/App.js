@@ -5,10 +5,18 @@ import './App.css';
 class App extends React.Component {
 
   /* lifcycle method */
+
   componentDidMount() {
     console.log("Mounted");
     //get device location
-
+    if (navigator.geolocation){
+      //console.log("Supported")
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position.coords.latitude);
+      })
+    } else{ 
+      console.log("Not Supported")
+    }
   
   }
 
