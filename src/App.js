@@ -34,15 +34,16 @@ class App extends React.Component {
           console.log(res)
           
           const weatherData = {
-            location:res.data.location.name,
-            temperature:res.data.current.temperature,
-            description:res.data.current.weather_descriptions[0],
-            region:res.data.location.region,
-            country:res.data.location.country,
-            wind_speed:res.data.current.wind_speed,
-            
-
-
+            location: res.data.location.name,
+            temperature: res.data.current.temperature,
+            description: res.data.current.weather_descriptions[0],  //[0] brings back 1st description only
+            region: res.data.location.region,
+            country: res.data.location.country,
+            wind_speed: res.data.current.wind_speed,
+            pressure: res.data.current.pressure,
+            precip: res.data.current.pressure,
+            humidity: res.data.current.humidity,
+            img: res.data.current.weather_icons
           }
         })
       })
