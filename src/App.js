@@ -10,7 +10,8 @@ class App extends React.Component {
     coords:{
       latitude: 45,
       longitude: 60
-    }
+    },
+    data: {}
   }
   
   /* lifcycle method */
@@ -33,6 +34,7 @@ class App extends React.Component {
         Axios.get(`http://api.weatherstack.com/current?access_key=3e3ff8f35d948794fe3b66925fce0e7c&query=${this.state.coords.latitude},${this.state.coords.longitude}`).then(res => {
           console.log(res)
           
+          //object weatherData
           const weatherData = {
             location: res.data.location.name,
             temperature: res.data.current.temperature,
@@ -45,6 +47,7 @@ class App extends React.Component {
             humidity: res.data.current.humidity,
             img: res.data.current.weather_icons
           }
+          this.setState({data:weatherData});
         })
       })
     } else{ 
