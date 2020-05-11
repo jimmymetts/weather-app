@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function DiaplayWeather() {
+export default function() {
     return (
         <div>
-            
+            DisplayWeather
         </div>
     )
 }
