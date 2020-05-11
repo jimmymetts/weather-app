@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Axios from 'axios';
+import '.components/Displayweather.js';
 
 
 class App extends React.Component {
@@ -59,6 +60,8 @@ class App extends React.Component {
  render(){
    return (
      <div className="app">
+
+       <Displayweather />
 
 
      </div>
